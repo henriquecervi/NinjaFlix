@@ -1,0 +1,2 @@
+cucumber.yml: default: --publish-quiet=true
+#default: --publish-quiet
