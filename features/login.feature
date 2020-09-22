@@ -1,4 +1,4 @@
-#Language: pt
+#language: pt
 
 Funcionalidade: Login
     Para que eu possa gerenciar os filmes do catálogo NinjaFlix
@@ -7,6 +7,7 @@ Funcionalidade: Login
 
     # BDD (Desenvolvimento guiado por comportamento)
 
+    @login_happy
     Cenário: Acesso
         Quando eu faço login com "henrique@henrique.com.br" e "bernardo"
         Então devo ser autenticado
