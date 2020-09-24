@@ -1,5 +1,6 @@
 #language: pt
 
+@login
 Funcionalidade: Login
     Para que eu possa gerenciar os filmes do catálogo NinjaFlix
     Sendo um usuário previamente cadastrado
@@ -9,27 +10,25 @@ Funcionalidade: Login
 
     @login_happy
     Cenário: Acesso
-        Quando eu faço login com "henrique@henrique.com.br" e "bernardo"
+        Quando eu faço login com "henrique@henrique.com" e "123456"
         Então devo ser autenticado
         E devo ver "Henrique Cervi" na área logada
 
-    @senha_invalida
-    Cenário: Senha inválida
-        Quando eu faço login com "henrique@henrique.com.br" e "oioi"
+    @login_hapless
+    Esquema do Cenário: Login sem sucesso
+        Quando eu faço login com <email> e <senha>
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
+        E devo ver a mensagem de alerta <msg_texto>
 
-    Cenário: Usuário não existe
-        Quando eu faço login com "henrique@henrique" e "oioi"
-        Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
+        Exemplos:
+        |email                       | senha  | msg_texto                      |
+        | "henrique@henrique.com.br" | "xpto" | "Usuário e/ou senha inválidos" |
+        | "henrique@henrique"        | "xpto" | "Usuário e/ou senha inválidos" |
+        | ""                         | "xpto" | "Opps. Cadê o email?"          |
+        | "henrique@henrique.com.br" | ""     | "Opps. Cadê a senha?"          |
 
-    Cenário: Email não informado
-        Quando eu faço login com "" e "oioi123"
-        Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Opps. Cadê o email?"
 
-    Cenário: Senha não informada
-        Quando eu faço login com "henrique@henrique" e ""
-        Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Opps. Cadê a senha?"
+    
+ 
+ 
+  
