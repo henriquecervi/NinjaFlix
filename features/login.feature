@@ -13,15 +13,16 @@ Funcionalidade: Login
         Então devo ser autenticado
         E devo ver "Henrique Cervi" na área logada
 
+    @senha_invalida
     Cenário: Senha inválida
         Quando eu faço login com "henrique@henrique.com.br" e "oioi"
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Usuário e/ou senha inválido"
+        E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
 
     Cenário: Usuário não existe
         Quando eu faço login com "henrique@henrique" e "oioi"
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Usuário e/ou senha inválido"
+        E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
 
     Cenário: Email não informado
         Quando eu faço login com "" e "oioi123"
