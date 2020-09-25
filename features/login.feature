@@ -10,7 +10,7 @@ Funcionalidade: Login
 
     @login_happy
     Cenário: Acesso
-        Quando eu faço login com "henrique@henrique.com" e "123456"
+        Quando eu faço login com "henrique@henrique.com.br" e "123456"
         Então devo ser autenticado
         E devo ver "Henrique Cervi" na área logada
 
