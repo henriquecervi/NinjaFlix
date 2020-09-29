@@ -9,5 +9,7 @@ Dado('que {string} é um novo filme') do |movie_code|
   end
   
   Então('devo ver o novo filme na lista') do
-    expect(page).to have_text @movie["title"]  
+    result = @movie_page.movie_tr(@movie)
+    expect(result).to have_text @movie["title"]  
+    expect(result).to have_text @movie["status"] 
   end
