@@ -2,9 +2,9 @@ ultimato:
   title: "Vingadores Ultimato"
   status: "Disponível"
   year: 2019
-  release_date: "24/04/2019"
+  realease_date: "24/04/2019"
   cast: ["Robert Downey Jr", "Chris Evans"]
-  overview: "Após Thanos eliminar tudo, eis que."
+  overview: "Após Thanos eliminar tudo, eis que ..."
   cover: "ultimato.jpg"
 spider:
   title: "Homem Aranha"
@@ -12,7 +12,7 @@ spider:
   year: 2019
   realease_date: "04/07/2019"
   cast: ["Tom Holland", "Samuel L. Jackson"]
-  overview: "Peter, está viajando e ai já viu.."
+  overview: "Peter, está viajando e ai já viu ..."
   cover: "spider.jpg"
 joker:
   title: "Coringa"
@@ -20,5 +20,5 @@ joker:
   year: 2020
   realease_date: "10/10/2020"
   cast: ["Joaquin Phoenix"]
-  overview: "O comendiante fanfarrão ataca ..."
+  overview: "O comediante fanfarrão ataca ..."
   cover: "coringa.jpg"

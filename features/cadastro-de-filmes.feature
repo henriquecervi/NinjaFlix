@@ -1,5 +1,6 @@
 #language:pt
 
+@login
 Funcionalidade: Cadastro de Filmes
     Para que eu possa disponibilizar novos títulos no catálogo
     Sendo um gestor de catálogo
