@@ -13,3 +13,7 @@ Dado('que {string} é um novo filme') do |movie_code|
     expect(result).to have_text @movie["title"]  
     expect(result).to have_text @movie["status"] 
   end
+
+  Então('devo ter a notificação {string}') do |expect_alert|
+    expect(@movie_page.alert).to eql expect_alert
+  end

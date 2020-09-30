@@ -5,6 +5,16 @@ class MoviePages
         find(".nc-simple-add").click
     end
 
+    def alert
+        find(".alert").text
+    end
+
+    def select_status(status)
+        #combobox customizada - com LIS, lista
+        find("input[placeholder=Status").click
+        find(".el-select-dropdown__item", text: status).click
+    end
+
     def upload(file)
         cover_file = File.join(Dir.pwd, "features/support/fixtures/cover/" + file)
         cover_file = cover_file.tr("/", "\\") if OS.windows? #isso quer dizer windows = true
@@ -27,18 +37,16 @@ class MoviePages
     def create(movie)
         find('input[name=title]').set movie["title"]
 
-        #combobox customizada - com LIS, lista
-        find("input[placeholder=Status").click
-        find(".el-select-dropdown__item", text: movie["status"]).click
+        select_status(movie["status"]) unless movie["status"].empty?
 
         find("input[name=year]").set movie["year"]
-        find("input[name=release_date]").set movie["realease_date"]
+        find("input[name=release_date]").set movie["release_date"]
 
         cast_add(movie["cast"])       
 
         find("textarea[name=overview").set movie["overview"]
 
-        upload(movie["cover"])     
+        upload(movie["cover"]) unless movie["cover"].empty?     
         
         find("#create-movie").click
     end

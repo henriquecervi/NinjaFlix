@@ -17,10 +17,31 @@ Funcionalidade: Cadastro de Filmes
         Então devo ver o novo filme na lista
 
     Exemplos:
-
         | filme      |
         | "ultimato" |
         | "spider"   |
         | "joker"    |
+
+    @campos_obrigatorios
+    Esquema do Cenario: Campos Obrigatórios
+        O gestor de catálogo tenta cadastrar um novo filme, mas esquece
+        de preencher um dos campos obrigatórios, em seguida, o sistema
+        exibe uma notificação para o mesmo.
+
+        Dado que <filme> é um novo filme
+        Quando eu faço o cadastro deste filme
+        Então devo ter a notificação <texto>
+
+    Exemplos:
+        | filme       | texto                                                  |
+        | "no_title"  | "Oops - Filme sem titulo. Pode isso Arnaldo?"          |
+        | "no_status" | "Oops - O status deve ser informado!"                  |
+        | "no_year"   | "Oops - Faltou o ano de lançamento também!"            |
+        | "no_date"   | "Oops - Quase lá, só falta a data de estréia!"         |
+        
+
+
+
+
 
         
