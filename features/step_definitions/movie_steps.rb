@@ -22,3 +22,22 @@ Dado('que {string} é um novo filme') do |movie_code|
   Então('devo ter a notificação {string}') do |expect_alert|
     expect(@movie_page.alert).to eql expect_alert
   end
+
+  Dado('que {string} está no catálogo') do |movie_code|
+    steps %{
+      Dado que "#{movie_code}" é um novo filme
+      E este filme já exite no catálogo
+    }
+  end
+  
+  Quando('eu solicito a exlusão') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Quando('eu confirmo a solicitação') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Então('este item deve ser removido do catálogo') do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
