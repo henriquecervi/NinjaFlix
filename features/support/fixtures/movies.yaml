@@ -22,6 +22,14 @@ joker:
   cast: ["Joaquin Phoenix"]
   overview: "O comediante fanfarrão ataca ..."
   cover: "coringa.jpg"
+deadpool2:
+  title: "Deadpool 2"
+  status: "Disponível"
+  year: 2018
+  release_date: "10/05/2018"
+  cast: ["Deadpool"]
+  overview: "O super soldado que vai ajudar o amiguinho."
+  cover: "dp2.jpg"
 no_title:
   title: ""
   status: "Disponível"
