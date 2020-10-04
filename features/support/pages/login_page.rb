@@ -9,8 +9,7 @@ class LoginPage
     def with(email, password)
         find("input[name=email]").set email
         find("input[name=password]").set password
-        click_button "Entrar"
-        sleep 2
+        click_button "Entrar"        
     end
 
    def alert

@@ -4,7 +4,7 @@ Quando('eu faço login com {string} e {string}') do |email, password|
 end
   
   Então('devo ser autenticado') do
-    
+    sleep 2
     expect(get_token.length).to be 148
   end
   
