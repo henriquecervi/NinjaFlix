@@ -14,7 +14,7 @@ Dado('que {string} é um novo filme') do |movie_code|
   end
   
   Então('devo ver o novo filme na lista') do
-    result = @movie_page.movie_tr(@movie)
+    result = @movie_page.movie_tr(@movie["title"])
     expect(result).to have_text @movie["title"]  
     expect(result).to have_text @movie["status"] 
   end
@@ -31,13 +31,13 @@ Dado('que {string} é um novo filme') do |movie_code|
   end
   
   Quando('eu solicito a exlusão') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @movie_page.remove(@movie["title"])
   end
   
   Quando('eu confirmo a solicitação') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @movie_page.swal2_confirm   
   end
   
   Então('este item deve ser removido do catálogo') do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(@movie_page.has_no_movie(@movie["title"])).to be true    
   end
