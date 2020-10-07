@@ -63,8 +63,16 @@ class MoviePages
         find(".swal2-confirm").click
     end
 
+    def swal2_cancel
+        find(".swal2-cancel").click
+    end
+
     def has_no_movie(title)
         page.has_no_css?("table tbody tr", text: title)
+    end
+
+    def has_movie(title)
+        page.has_css?("table tbody tr", text: title)
     end
 
 end
