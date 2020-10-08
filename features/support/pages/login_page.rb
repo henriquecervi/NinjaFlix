@@ -3,7 +3,6 @@ class LoginPage
 
     def go
         visit "/"
-        Capybara.page.driver.browser.manage.window.maximize
     end
 
     def with(email, password)

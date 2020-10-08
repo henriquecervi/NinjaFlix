@@ -1,6 +1,10 @@
 class MoviePages 
     include Capybara::DSL
 
+    def initialize
+        @movie_list_css = "table tbody tr"
+    end
+
     def add
         find(".nc-simple-add").click
     end
@@ -52,7 +56,7 @@ class MoviePages
     end
 
     def movie_tr(title)
-        find('table tbody tr', text: title)
+        find(@movie_list_css, text: title)
     end
 
     def remove(title)         
@@ -68,11 +72,11 @@ class MoviePages
     end
 
     def has_no_movie(title)
-        page.has_no_css?("table tbody tr", text: title)
+        page.has_no_css?(@movie_list_css, text: title)
     end
 
     def has_movie(title)
-        page.has_css?("table tbody tr", text: title)
+        page.has_css?(@movie_list_css, text: title)
     end
 
 end
