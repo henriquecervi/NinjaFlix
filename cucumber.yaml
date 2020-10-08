@@ -1,6 +1,9 @@
 ---
 default: --publish-quiet
 
-default: -p dev
+default: -p dev -p chrome
 dev: ENV_TYPE=dev
 hmg: ENV_TYPE=hmg
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=headless
