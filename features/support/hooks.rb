@@ -9,6 +9,7 @@ Before do
 end
 
 Before("@login") do
+    user = CONFIG["users"]["cat_manager"]
     @login_page.go
-    @login_page.with("henrique@henrique.com", "123456")
+    @login_page.with(user["email"], user["pass"])
 end

@@ -1,0 +1,6 @@
+---
+default: --publish-quiet
+
+default: -p dev
+dev: ENV_TYPE=dev
+hmg: ENV_TYPE=hmg

@@ -1,0 +1,7 @@
+---
+url: "http://localhost:8080/hlg" #simulação
+database:
+  host: "localhost.hlg"
+  dbname: "nflix"
+  user: "postgres"
+  password: "qaninja"
