@@ -1,4 +1,3 @@
----
 default: --publish-quiet
 
 default: -p dev -p chrome -p html -p progress
